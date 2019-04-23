@@ -25,9 +25,9 @@ git clone https://github.com/kapsakcj/singularities.git
 sudo singularity build my-new-spades-3.13.0-image.simg /path/to/Singularity.spades.3.13.0
 ```
 
-These Singularity images are also available to download from singularity-hub.org if you **don't have sudo priveleges** (no build necessary!)
+These Singularity images are also available to download from singularity-hub.org if you **don't have sudo priveleges** (no build necessary!). The badge below is a link to the singularity-hub.org collection.
 
-https://www.singularity-hub.org/collections/2778
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2778)
 
 The name of the Singularity hub collection is `kapsakcj/singularities` and the tag is specified by the extenion of the Singularity recipe file. For example the recipe, `/spades/3.13.0/Singularity.spades.3.13.0`, can be downloaded like so:
 ```
