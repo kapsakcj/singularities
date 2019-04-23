@@ -11,9 +11,32 @@ Sysadmins for High Performance Cluster computers almost always favor Sinularity 
 | Software | Version | Link |
 | :--------: | :-------: | :--------: |
 | SPAdes | 3.13.0 | http://cab.spbu.ru/software/spades/ |
+| QUAST | 5.0.0 | https://github.com/ablab/quast |
+| Lyve-SET | 1.1.4f | https://github.com/lskatz/lyve-SET |
+
+These Singularity images can be built if you have Singularity installed and **have sudo/admin priveleges**
+```
+# build an image using a recipe (called Singularity in this example)
+sudo singularity build my-new-singularity-image.simg /path/to/Singularity
+
+# download the repo
+git clone https://github.com/kapsakcj/singularities.git
+# another example using the SPAdes recipe
+sudo singularity build my-new-spades-3.13.0-image.simg /path/to/Singularity.spades.3.13.0
+```
+
+These Singularity images are also available to download from singularity-hub.org if you **don't have sudo priveleges** (no build necessary!). The badge below is a link to the singularity-hub.org collection.
+
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2778)
+
+The name of the Singularity hub collection is `kapsakcj/singularities` and the tag is specified by the extenion of the Singularity recipe file. For example the recipe, `/spades/3.13.0/Singularity.spades.3.13.0`, can be downloaded like so:
+```
+# download an image like so, and name it whatever you want with the --name flag
+singularity pull --name my-new-spades-3.13.0-image shub://kapsakcj/singularities:spades.3.13.0
+```
 
 ## Useful links and resources
-- Singularity v2.5 User guide https://www.sylabs.io/guides/2.5/user-guide/index.html
+- Singularity v2.6 User guide https://www.sylabs.io/guides/2.6/user-guide/index.html
 - SingularityHub https://singularity-hub.org/
 - Excellent tutorial on Singularity (using v2.5) from Sylabs, many other links within https://github.com/Singularity-tutorial/Singularity-tutorial.github.io
 - How to build a container using Singularity Hub, linked to a github repo with Singularity recipes https://github.com/singularityhub/singularityhub.github.io/wiki/Build-A-Container
@@ -22,6 +45,11 @@ Sysadmins for High Performance Cluster computers almost always favor Sinularity 
 - Singularity automatically brings your user & group into the container with you (ie. no `-u $(id -u):$(id -g)` needed like in Docker)
 - Singularity (by default) wants to mount your entire home directory inside the container as well. Use `--cleanenv` and `--containall` to keep things separate and bring in specific directories you want with `-B /local-dir:/dir-in-container`
 - Docker images converted to Singularity that want to write to system directories owned by root aren't going to work out of the box.
+- If you are making a container with something that uses perl, add this to the recipe in the `%environment` section to prevent locale settings errors (see lyveset recipe)
+```
+%environment
+    export LC_ALL=C
+```
 
 
 TO-DO
