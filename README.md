@@ -1,5 +1,5 @@
 # singularities
-Singularity recipes for bioinformatics software.
+Singularity recipes for bioinformatics software. Build singularity images with these recipes (sudo required) or download/pull the images from [singularity-hub.org](https://singularity-hub.org/collections/2778)
 
 This repo is __WORK IN PROGRESS__. Feel free to try the recipes/Singularity builds, but they are __not tested deeply and are in no way guaranteed to work. Proceed at your own risk__. 
 
