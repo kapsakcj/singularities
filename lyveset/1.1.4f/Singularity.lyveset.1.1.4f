@@ -6,14 +6,14 @@ From: ubuntu:xenial
 ### To build me into an image, run:
     sudo singularity build my-new-lyveset-image.simg /path/to/lyveset/1.1.4f/Singularity.lyveset.1.1.4f
 ### If the image already exists, add the --force flag to overwrite
-    sudo singularity build --force my-new-lyveset-image.simg /path/to/quast/5.0.0/Singularity.lyveset.1.1.4f
+    sudo singularity build --force my-new-lyveset-image.simg /path/to/lyveset/1.1.4f/Singularity.lyveset.1.1.4f
 
 #### Then to run in an interactive shell run:
     singularity shell my-new-lyveset-image.simg
-    quast.py [spades options]
+    launch_set.pl [options]
 
 #### To run without interactive shell
-    singularity exec my-new-lyveset-image.simg quast.py [spades options]
+    singularity exec my-new-lyveset-image.simg launch_set.pl [options]
 
 %labels
     MAINTAINER Curtis Kapsak

@@ -10,10 +10,10 @@ From: ubuntu:xenial
 
 #### Then to run in an interactive shell run:
     singularity shell my-new-quast-image.simg
-    quast.py [spades options]
+    quast.py [options]
 
 #### To run without interactive shell
-    singularity exec my-new-quast-image.simg quast.py [spades options]
+    singularity exec my-new-quast-image.simg quast.py [options]
 
 %labels
     MAINTAINER Curtis Kapsak
