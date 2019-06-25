@@ -43,9 +43,9 @@ rm -rf 0.122.tar.gz
 
 # Install SPAdes
 cd /
-wget http://cab.spbu.ru/files/release3.13.0/SPAdes-3.13.0-Linux.tar.gz
-tar -xzf SPAdes-3.13.0-Linux.tar.gz
-rm -rf SPAdes-3.13.0-Linux.tar.gz
+wget https://github.com/ablab/spades/releases/download/v3.8.2/SPAdes-3.8.2-Linux.tar.gz
+tar -xzf SPAdes-3.8.2-Linux.tar.gz
+rm -rf SPAdes-3.8.2-Linux.tar.gz
 
 # Install SeqSero2
 cd /
@@ -55,7 +55,7 @@ rm -rf v1.0.0.tar.gz
 mkdir /data
 
 %environment
-export PATH="${PATH}:/SeqSero2-1.0.0:/SPAdes-3.13.0-Linux/bin:/SalmID-0.122:/samtools-1.9"
+export PATH="${PATH}:/SeqSero2-1.0.0:/SPAdes-3.8.2-Linux/bin:/SalmID-0.122:/samtools-1.9"
 
 %runscript
 exec /bin/bash "$@"
