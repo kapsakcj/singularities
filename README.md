@@ -13,7 +13,7 @@ Sysadmins for High Performance Cluster computers almost always favor Sinularity 
 | SPAdes | 3.13.0 | http://cab.spbu.ru/software/spades/ |
 | QUAST | 5.0.0 | https://github.com/ablab/quast |
 | Lyve-SET | 1.1.4f | https://github.com/lskatz/lyve-SET |
-| SeqSero2 | 0.1 | https://github.com/denglab/SeqSero2 |
+| SeqSero2 | 0.1, 1.0.0 | https://github.com/denglab/SeqSero2 |
 
 These Singularity images can be built if you have Singularity installed and **have sudo/admin priveleges**
 ```
